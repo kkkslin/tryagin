@@ -273,9 +273,38 @@ param形式
 ```
 
 ## 2.6 更贴
-没写，api好怪
 **request**
+(Put)
+/api/post
+body中的form-data形式（看群里的图）
+1. post： application/json type
+   {
+	   "title":"string",
+	   "text":"string"
+   }
+2. post_id:普通类型
+
+
 **response**
+   ```json
+   {
+    "code": 0,
+    "error_msg": "",
+    "data": {
+        "posts": [
+            {
+                "id": "anonymous_20230515121749",
+                "title": "no title",
+                "content_type": 0,
+                "text": "string",
+                "media_url": "",
+                "location_x": 0.0,
+                "location_y": 0.0,
+                "ownername": "ksl",
+                "post_time": "2023-05-15 12:17"
+            }]
+	}
+```
 
 # Comment module
 ## 3.1 发评论
