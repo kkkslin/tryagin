@@ -215,7 +215,64 @@ param形式
 ```
 posts 直接把post信息全贴上去了。。。写起来方便
 
-## 2.5 更贴
+## 2.5 我发表的帖子
+**request**
+(get)
+/api/post/mypost
+param形式
+```json
+{
+	"page_num":0, //从1开始数
+	"page_size":3,
+	"username":"ksl"
+}
+```
+**response**
+```json
+{
+    "code": 0,
+    "error_msg": "",
+    "data": {
+        "posts": [
+            {
+                "id": "anonymous_20230515121749",
+                "title": "no title",
+                "content_type": 0,
+                "text": "string",
+                "media_url": "",
+                "location_x": 0.0,
+                "location_y": 0.0,
+                "ownername": "ksl",
+                "post_time": "2023-05-15 12:17"
+            },
+            {
+                "id": "anonymous_20230515121803",
+                "title": "no title",
+                "content_type": 1,
+                "text": "string",
+                "media_url": "http://192.168.0.124:90017.png",
+                "location_x": 0.0,
+                "location_y": 0.0,
+                "ownername": "ksl",
+                "post_time": "2023-05-15 12:18"
+            },
+            {
+                "id": "ksl_20230514200258",
+                "title": "ksls post",
+                "content_type": 1,
+                "text": "string",
+                "media_url": "http://192.168.0.124:9001/2747.png",
+                "location_x": 0.0,
+                "location_y": 0.0,
+                "ownername": "ksl",
+                "post_time": "2023-05-14 20:02"
+            }
+        ]
+    }
+}
+```
+
+## 2.6 更贴
 没写，api好怪
 **request**
 **response**
@@ -325,6 +382,56 @@ param形式
 }
 ```
 comments 直接把comment全部信息全贴上去了。。。写起来方便
+
+## 3.4 我的评论
+**request**
+(get)
+/api/comment/mycomment
+param形式
+```json
+{
+	"page_num":0, //从1开始数
+	"page_size":3,
+	"username":"string"  //什么帖子下的评论
+}
+```
+
+**response**
+```json
+{
+    "code": 0,
+    "error_msg": "",
+    "data": {
+        "comments": [
+            {
+                "id": "anonymous users_20230515161747",
+                "content_type": 0,
+                "text": "string",
+                "media_url": "",
+                "ownername": "string",
+                "post_id": "ksl_20230514200258"
+            },
+            {
+                "id": "anonymous users_20230515162008",
+                "content_type": 0,
+                "text": "string",
+                "media_url": "",
+                "ownername": "string",
+                "post_id": "ksl_20230514200258"
+            },
+            {
+                "id": "anonymous users_20230515162104",
+                "content_type": 0,
+                "text": "string",
+                "media_url": "",
+                "ownername": "string",
+                "post_id": "ksl_20230514200258"
+            }
+        ]
+    }
+}
+```
+
 
 # 实体类schemas
 ## 1 User
