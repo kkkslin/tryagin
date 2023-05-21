@@ -306,10 +306,89 @@ body中的form-data形式（看群里的图）
 	}
 ```
 
+## 2.7 管理员获取帖子列表（审核或未审核）
+**request**
+(get)
+/api/post/check
+param形式
+```json
+{
+	"page_num":0, //从1开始数
+	"page_size":3,
+	"checked":0/1  //0代表要获取未审核的 1代表获取已经审核的
+}
+```
+**response**
+```json
+{
+    "code": 0,
+    "error_msg": "",
+    "data": {
+        "posts": [
+            {
+                "id": "anonymous_20230515121749",
+                "title": "no title",
+                "content_type": 0,
+                "text": "string",
+                "media_url": "",
+                "location_x": 0.0,
+                "location_y": 0.0,
+                "ownername": "ksl",
+                "post_time": "2023-05-15 12:17"
+            },
+            {
+                "id": "anonymous_20230515121803",
+                "title": "no title",
+                "content_type": 1,
+                "text": "string",
+                "media_url": "http://192.168.0.124:90017.png",
+                "location_x": 0.0,
+                "location_y": 0.0,
+                "ownername": "ksl",
+                "post_time": "2023-05-15 12:18"
+            },
+            {
+                "id": "ksl_20230514200258",
+                "title": "ksls post",
+                "content_type": 1,
+                "text": "string",
+                "media_url": "http://192.168.0.124:9001/2747.png",
+                "location_x": 0.0,
+                "location_y": 0.0,
+                "ownername": "ksl",
+                "post_time": "2023-05-14 20:02"
+            }
+        ]
+    }
+}
+```
+
+## 2.8 帖子已审核请求
+**request**
+（post）
+/api/post/check
+param类型
+```json
+{
+	"post_id":"string"
+}
+```
+**response**
+0成功 1失败
+```json
+{
+  "code": 0,
+  "error_msg": "string",
+  "data": {
+  }
+}
+```
+
+
 # Comment module
 ## 3.1 发评论
 **request**
-(Post)
+(post)
 /api/comment
 body中的form-data形式（看群里的图）
 1. file：image或video
