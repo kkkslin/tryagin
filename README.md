@@ -149,7 +149,10 @@ param类型
         "id": "ksl_20230514200258",
         "text": "string",
         "title": "ksls post",
-        "media_url": "http://192.168.0.124:9001/2023051420047.png"
+        "media_url": "http://192.168.0.124:9001/2023051420047.png",
+		"post_time":"string",
+		"ownername":"string"
+		
     }
 }
 ```
@@ -459,7 +462,7 @@ param形式
 {
     "code": 0,
     "error_msg": "",
-    "data": {
+   "data": {
         "comments": [
             {
                 "id": "anonymous users_20230515161747",
@@ -467,7 +470,8 @@ param形式
                 "text": "string",
                 "media_url": "",
                 "ownername": "anonymous users",
-                "post_id": "ksl_20230514200258"
+                "post_id": "ksl_20230514200258",
+                "post_time": "2023-05-15 16:17"
             },
             {
                 "id": "anonymous users_20230515162008",
@@ -475,7 +479,8 @@ param形式
                 "text": "string",
                 "media_url": "",
                 "ownername": "anonymous users",
-                "post_id": "ksl_20230514200258"
+                "post_id": "ksl_20230514200258",
+                "post_time": "2023-05-15 16:20"
             },
             {
                 "id": "anonymous users_20230515162104",
@@ -483,9 +488,10 @@ param形式
                 "text": "string",
                 "media_url": "",
                 "ownername": "anonymous users",
-                "post_id": "ksl_20230514200258"
+                "post_id": "ksl_20230514200258",
+                "post_time": "2023-05-15 16:21"
             }
-        ]
+		]
     }
 }
 ```
@@ -516,26 +522,29 @@ param形式
                 "content_type": 0,
                 "text": "string",
                 "media_url": "",
-                "ownername": "string",
-                "post_id": "ksl_20230514200258"
+                "ownername": "anonymous users",
+                "post_id": "ksl_20230514200258",
+                "post_time": "2023-05-15 16:17"
             },
             {
                 "id": "anonymous users_20230515162008",
                 "content_type": 0,
                 "text": "string",
                 "media_url": "",
-                "ownername": "string",
-                "post_id": "ksl_20230514200258"
+                "ownername": "anonymous users",
+                "post_id": "ksl_20230514200258",
+                "post_time": "2023-05-15 16:20"
             },
             {
                 "id": "anonymous users_20230515162104",
                 "content_type": 0,
                 "text": "string",
                 "media_url": "",
-                "ownername": "string",
-                "post_id": "ksl_20230514200258"
+                "ownername": "anonymous users",
+                "post_id": "ksl_20230514200258",
+                "post_time": "2023-05-15 16:21"
             }
-        ]
+		]
     }
 }
 ```
