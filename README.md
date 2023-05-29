@@ -40,7 +40,7 @@ POST
 }
 ```
 
-## 1.3 修改信息
+## 1.3 修改密码
 **request**：
 （Post）
 /api/user/modify
@@ -49,8 +49,7 @@ POST
 {
   "old_password": "string",
   "new_password": "string",
-  "old_username": "string",
-  "new_username": "string"
+  "username": "string"
 }
 ```
 
@@ -377,7 +376,6 @@ param类型
 }
 ```
 **response**
-0成功 1失败
 ```json
 {
   "code": 0,
